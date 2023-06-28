@@ -11,6 +11,8 @@ document.body.appendChild(button);
 
 button.onclick = function () {
 
+    // Fetch JSON
+
     const fetchJson = fetch("becode.json");
     console.log("Making the request", fetchJson);
 
@@ -23,7 +25,7 @@ button.onclick = function () {
     });
 }
 
-
+// Create ul 
 
 function generateList(rules) {
     const ul = document.createElement('ul');

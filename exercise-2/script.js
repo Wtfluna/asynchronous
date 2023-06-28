@@ -5,12 +5,14 @@ button.id = "myButton";
 button.textContent = "Click Me";
 document.body.appendChild(button);
 
-utton.onclick = function () {
+button.onclick = function () {
+
+//Fetch a random fact
 
     const fetchAPI = fetch("https://api.chucknorris.io/jokes/random");
     console.log("Making the request", fetchAPI);
 
-    const response = fetchJson.then((response) => response.json());
+    const response = fetchAPI.then((response) => response.json());
     console.log("Treating the response", response);
 
     response.then((data) => {
@@ -18,3 +20,5 @@ utton.onclick = function () {
         generateList(data);
     });
 }
+
+//Display result in new div
